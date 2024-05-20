@@ -27,14 +27,14 @@ public class LevelButton : MonoBehaviour
         gameData = FindObjectOfType<GameData>();
         buttonImage = GetComponent<Image>();
         myButton = GetComponent<Button>();
-        LoadData();
+        //LoadData();
         ActivateStars();
         ShowLevel();
         DecideSprite();
     }
     void ActivateStars()
     {
-        for(int i = 0; i < stars.Length; i++)
+        for(int i = 0; i < starsActive; i++)
         {
             stars[i].enabled = true;
         }
@@ -56,6 +56,7 @@ public class LevelButton : MonoBehaviour
         }
     }
 
+    /*
     void LoadData()
     {
         //Is game data present?
@@ -74,6 +75,7 @@ public class LevelButton : MonoBehaviour
             starsActive = gameData.saveData.stars[level - 1];
         }
     }
+    */
 
     void ShowLevel()
     {
