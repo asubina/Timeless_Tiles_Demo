@@ -180,7 +180,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 2
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
@@ -945,7 +945,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 312620491}
         m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
-        m_MethodName: OK
+        m_MethodName: WinOK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2443,7 +2443,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '
 
-    START
+    BACK
 
 '
 --- !u!222 &1441474495
@@ -2485,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   world: {fileID: 11400000, guid: 0e43ecb1781e2d74992e9df3c2683bd6, type: 2}
-  level: 4
+  level: 1
   currentState: 1
   width: 6
   height: 8
@@ -2627,7 +2627,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 312620491}
         m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
-        m_MethodName: OK
+        m_MethodName: LoseOK
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2732,7 +2732,7 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 10
-  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1

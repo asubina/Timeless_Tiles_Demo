@@ -27,7 +27,7 @@ public class LevelButton : MonoBehaviour
         gameData = FindObjectOfType<GameData>();
         buttonImage = GetComponent<Image>();
         myButton = GetComponent<Button>();
-        //LoadData();
+        LoadData();
         ActivateStars();
         ShowLevel();
         DecideSprite();
