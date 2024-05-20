@@ -17,6 +17,7 @@ TagManager:
   - Blue Dot
   - Purple Dot
   - Breakable
+  - Board
   layers:
   - Default
   - TransparentFX
