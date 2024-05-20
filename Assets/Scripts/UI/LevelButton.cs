@@ -32,9 +32,29 @@ public class LevelButton : MonoBehaviour
         ShowLevel();
         DecideSprite();
     }
+    
+    void LoadData()
+    {
+        //Is game data present?
+        if(gameData != null)
+        {
+            //Decide if the level is active
+            if (gameData.saveData.isActive[level - 1])
+            {
+                isActive = true;
+            }
+            else
+            {
+                isActive = false;
+            }
+            //Decide how many stars to activate
+            starsActive = gameData.saveData.stars[level - 1];
+        }
+    }
+    
     void ActivateStars()
     {
-        for(int i = 0; i < starsActive; i++)
+        for (int i = 0; i < starsActive; i++)
         {
             stars[i].enabled = true;
         }
@@ -56,27 +76,6 @@ public class LevelButton : MonoBehaviour
         }
     }
 
-    /*
-    void LoadData()
-    {
-        //Is game data present?
-        if(gameData != null)
-        {
-            //Decide if the level is active
-            if (gameData.saveData.isActive[level - 1])
-            {
-                isActive = true;
-            }
-            else
-            {
-                isActive = false;
-            }
-            //Decide how many stars to activate
-            starsActive = gameData.saveData.stars[level - 1];
-        }
-    }
-    */
-
     void ShowLevel()
     {
         levelText.text = "" + level;
@@ -88,7 +87,7 @@ public class LevelButton : MonoBehaviour
 
     }
 
-    public void ConfirmPanel(int level) 
+    public void ConfirmPanel(int level)
     {
         confirmPanelObject.GetComponent<ConfirmPannel>().Level = level;
         confirmPanelObject.SetActive(true);

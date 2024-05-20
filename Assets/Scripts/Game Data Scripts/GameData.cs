@@ -31,6 +31,7 @@ public class GameData : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        Load();
 
     }
     private void Start()
