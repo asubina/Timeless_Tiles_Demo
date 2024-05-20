@@ -6,18 +6,26 @@ using UnityEngine.SceneManagement;
 
 public class ConfirmPannel : MonoBehaviour
 {
+    [Header("Level information")]
     public string levelToLoad;
-    public Image[] stars;
-    private int starsActive;
     public int level;
-    public int Level { get => level; set => level = value; }
     private GameData gameData;
+    private int starsActive;
+    private int highScore;
 
+    [Header("UI Stuff")]
+    public Image[] stars;
+    public Text highScoreText;
+    public Text starText;
+    
+    public int Level { get => level; set => level = value; }
+ 
     // Start is called before the first frame update
     void Start()
     {
         gameData = FindObjectOfType<GameData>();
         ActivateStars();
+        SetText();
     }
 
     void LoadData()
@@ -25,7 +33,14 @@ public class ConfirmPannel : MonoBehaviour
         if(gameData != null)
         {
             starsActive = gameData.saveData.stars[level - 1];
+            highScore = gameData.saveData.highScore[level - 1];
         }
+    }
+
+    void SetText()
+    {
+        highScoreText.text = "" + highScore;
+        starText.text = "" + starsActive + "/3";
     }
     void ActivateStars()
     {
