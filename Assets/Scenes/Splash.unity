@@ -1183,9 +1183,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 1966750101}
-  - {fileID: 1640357687}
-  - {fileID: 1393282466}
+  - {fileID: 2026999270}
+  - {fileID: 878735080}
+  - {fileID: 428872620}
   levelText: {fileID: 1109032590}
   level: 4
   confirmPanelObject: {fileID: 935508773}
@@ -2002,7 +2002,7 @@ MonoBehaviour:
   saveData:
     isActive: 01010101010101010101
     highScore: 0a000000000000000000000000000000000000000000000000000000000000000000000000000000
-    stars: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
+    stars: 030000000100000001000000000000000000000000000000000000000000000000000000
 --- !u!1 &491118648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,9 +2309,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 674730792}
-  - {fileID: 519803887}
-  - {fileID: 773616393}
+  - {fileID: 1711161559}
+  - {fileID: 927932775}
+  - {fileID: 952657611}
   levelText: {fileID: 1723714382}
   level: 8
   confirmPanelObject: {fileID: 935508773}
@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8695ce05d6e624b82b03d62df1b5b42a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf3e4ea47217844a9852e832f9e142fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3295,9 +3295,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 84047897}
-  - {fileID: 105043142}
-  - {fileID: 853555424}
+  - {fileID: 907514053}
+  - {fileID: 1958377230}
+  - {fileID: 1659523568}
   levelText: {fileID: 573009326}
   level: 9
   confirmPanelObject: {fileID: 935508773}
@@ -3700,9 +3700,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 350019784}
-  - {fileID: 491118650}
-  - {fileID: 436622443}
+  - {fileID: 1011961403}
+  - {fileID: 1698624258}
+  - {fileID: 87326755}
   levelText: {fileID: 115910576}
   level: 6
   confirmPanelObject: {fileID: 935508773}
@@ -3934,9 +3934,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 1261452326}
-  - {fileID: 1886453245}
-  - {fileID: 1906403586}
+  - {fileID: 824425067}
+  - {fileID: 842495311}
+  - {fileID: 34108249}
   levelText: {fileID: 1118086420}
   level: 5
   confirmPanelObject: {fileID: 935508773}
@@ -4248,9 +4248,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 1082714877}
-  - {fileID: 1027603960}
-  - {fileID: 1078055818}
+  - {fileID: 245081397}
+  - {fileID: 1012994943}
+  - {fileID: 659724460}
   levelText: {fileID: 1959195502}
   level: 2
   confirmPanelObject: {fileID: 935508773}
@@ -6577,7 +6577,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8695ce05d6e624b82b03d62df1b5b42a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf3e4ea47217844a9852e832f9e142fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7076,9 +7076,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 354505097}
-  - {fileID: 1367405985}
-  - {fileID: 659441610}
+  - {fileID: 1082404442}
+  - {fileID: 790699976}
+  - {fileID: 871652405}
   levelText: {fileID: 853128140}
   level: 7
   confirmPanelObject: {fileID: 935508773}
@@ -7804,9 +7804,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 269864759}
-  - {fileID: 1959558135}
-  - {fileID: 1308441364}
+  - {fileID: 2023472272}
+  - {fileID: 627102355}
+  - {fileID: 1626158732}
   levelText: {fileID: 1188927368}
   level: 1
   confirmPanelObject: {fileID: 935508773}
@@ -8077,9 +8077,9 @@ MonoBehaviour:
   activeSprite: {fileID: 21300000, guid: e907d80b750c08345a8bbbd523bb5ecf, type: 3}
   lockedSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
   stars:
-  - {fileID: 1055601637}
-  - {fileID: 147834124}
-  - {fileID: 1567717233}
+  - {fileID: 1761078175}
+  - {fileID: 1276021845}
+  - {fileID: 2032353147}
   levelText: {fileID: 104811643}
   level: 3
   confirmPanelObject: {fileID: 935508773}
@@ -8727,7 +8727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8695ce05d6e624b82b03d62df1b5b42a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cf3e4ea47217844a9852e832f9e142fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
