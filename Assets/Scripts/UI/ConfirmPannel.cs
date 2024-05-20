@@ -21,9 +21,10 @@ public class ConfirmPannel : MonoBehaviour
     public int Level { get => level; set => level = value; }
  
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         gameData = FindObjectOfType<GameData>();
+        LoadData();
         ActivateStars();
         SetText();
     }
@@ -44,7 +45,6 @@ public class ConfirmPannel : MonoBehaviour
     }
     void ActivateStars()
     {
-        //COME BACK
         for (int i = 0; i < starsActive; i++)
         {
             stars[i].enabled = true;

@@ -26,6 +26,15 @@ public class ScoreManager : MonoBehaviour {
     public void IncreaseScore(int amountToIncrease)
 	{
 		score += amountToIncrease;
+		if(gameData != null)
+		{
+			int hscore = gameData.saveData.highScore[board.level];
+			if(score  > hscore)
+			{
+                gameData.saveData.highScore[board.level] = score;
+            }
+			gameData.Save();
+		}
 		UpdateBar();
 	}
 
