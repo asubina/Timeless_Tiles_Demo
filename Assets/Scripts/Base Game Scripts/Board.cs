@@ -419,10 +419,9 @@ public class Board : MonoBehaviour
     }
 
     private IEnumerator FillBoardCo(){
-        RefillBoard();
 		yield return new WaitForSeconds(refillDelay);
-
-        while(MatchesOnBoard()){
+        RefillBoard();
+        while (MatchesOnBoard()){
 			streakValue ++;
 			DestroyMatches();
 			yield return new WaitForSeconds(2 * refillDelay);

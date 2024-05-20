@@ -70,8 +70,21 @@ public class GameData : MonoBehaviour
             file.Close();
             Debug.Log("Loaded");
         }
+        else
+        {
+            saveData = new SaveData();
+            saveData.isActive = new bool[100];
+            saveData.stars = new int[100];
+            saveData.highScore = new int[100];
+            saveData.isActive[0] = true;
+        }
   
     }
+
+    private void OnApplicationQuit()
+    {
+        Save();
+;    }
 
     private void OnDisable()
     {
