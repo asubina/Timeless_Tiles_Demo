@@ -8,20 +8,31 @@ public class ConfirmPannel : MonoBehaviour
 {
     public string levelToLoad;
     public Image[] stars;
+    private int starsActive;
     public int level;
     public int Level { get => level; set => level = value; }
+    private GameData gameData;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameData = FindObjectOfType<GameData>();
         ActivateStars();
+    }
+
+    void LoadData()
+    {
+        if(gameData != null)
+        {
+            starsActive = gameData.saveData.stars[level - 1];
+        }
     }
     void ActivateStars()
     {
         //COME BACK
-        for (int i = 0; i < stars.Length; i++)
+        for (int i = 0; i < starsActive; i++)
         {
-            stars[i].enabled = false;
+            stars[i].enabled = true;
         }
     }
 
