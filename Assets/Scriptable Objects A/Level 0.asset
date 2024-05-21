@@ -16,10 +16,10 @@ MonoBehaviour:
   height: 7
   boardLayout: []
   dots:
-  - {fileID: 1364587841334750, guid: f8bd37a7d383940dbbc740c1a5e917b3, type: 3}
-  - {fileID: 1223371761558328, guid: 6f67e2d9c76474888bca2643873cd298, type: 3}
-  - {fileID: 1987821457856374, guid: fcf3445ef5a3748b4b2a5f2eeff8a7e1, type: 3}
   - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
+  - {fileID: 1954689237764068, guid: bc3c53142e6b44bab81c765f6ba5b2e8, type: 3}
+  - {fileID: 1886600490702098, guid: 28a0ed689e40444bf86965998f5f1e1a, type: 3}
+  - {fileID: 1032542754878642, guid: 68f0f34c7c6894c5489e9ed80463f5d1, type: 3}
   scoreGoals: e8030000d0070000b80b0000
   endGameRequirements:
     gameType: 0
@@ -27,9 +27,9 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 10
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 599c133b2a0881b4e9f17aee1ba6b513, type: 3}
-    matchValue: Blue Dot
+    goalSprite: {fileID: 21300000, guid: 704e2b21b43ed4c4eb6c50b0c05ad40a, type: 3}
+    matchValue: Yellow Dot
   - numberNeeded: 5
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 22075efcfa4884531917d580c319e18a, type: 3}
-    matchValue: Indigo Dot
+    goalSprite: {fileID: 21300000, guid: 599c133b2a0881b4e9f17aee1ba6b513, type: 3}
+    matchValue: Blue Dot
