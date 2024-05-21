@@ -403,78 +403,114 @@ public class Board : MonoBehaviour
             }
 
         }
-        /*
-        if (findMatches.currentMatches.Count == 4 || findMatches.currentMatches.Count == 7)
-        {
-            findMatches.CheckBombs();
-        }
-        if (findMatches.currentMatches.Count == 5 || findMatches.currentMatches.Count == 8)
-        {
-            if (ColumnOrRow())
-            {
-                //Make a color bomb
-                //is the current dot matched?
-                if (currentDot != null)
-                {
-                    if (currentDot.isMatched)
-                    {
-                        if (!currentDot.isColorBomb)
-                        {
-                            currentDot.isMatched = false;
-                            currentDot.MakeColorBomb();
-                        }
-                    }
-                    else
-                    {
-                        if (currentDot.otherDot != null)
-                        {
-                            Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
-                            if (otherDot.isMatched)
-                            {
-                                if (!otherDot.isColorBomb)
-                                {
-                                    otherDot.isMatched = false;
-                                    otherDot.MakeColorBomb();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            else
-            {
-                //Make a adjacent bomb
-                //is the current dot matched?
-                if (currentDot != null)
-                {
-                    if (currentDot.isMatched)
-                    {
-                        if (!currentDot.isAdjacentBomb)
-                        {
-                            currentDot.isMatched = false;
-                            currentDot.MakeAdjacentBomb();
-                        }
-                    }
-                    else
-                    {
-                        if (currentDot.otherDot != null)
-                        {
-                            Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
-                            if (otherDot.isMatched)
-                            {
-                                if (!otherDot.isAdjacentBomb)
-                                {
-                                    otherDot.isMatched = false;
-                                    otherDot.MakeAdjacentBomb();
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        */
+
     }
+
+    public void BombRow(int row)
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (concreteTiles[i, j])
+                {
+                    concreteTiles[i, row].TakeDamage(1);
+                    if (concreteTiles[i, row].hitPoints <= 0)
+                    {
+                        concreteTiles[i, row] = null;
+                    }
+                }
+            }
+        }
+    }
+    public void BombColumn(int column)
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (concreteTiles[i, j])
+                {
+                    concreteTiles[column, i].TakeDamage(1);
+                    if (concreteTiles[column, i].hitPoints <= 0)
+                    {
+                        concreteTiles[column, i] = null;
+                    }
+                }
+            }
+        }
+    }
+    /*
+    if (findMatches.currentMatches.Count == 4 || findMatches.currentMatches.Count == 7)
+    {
+        findMatches.CheckBombs();
+    }
+    if (findMatches.currentMatches.Count == 5 || findMatches.currentMatches.Count == 8)
+    {
+        if (ColumnOrRow())
+        {
+            //Make a color bomb
+            //is the current dot matched?
+            if (currentDot != null)
+            {
+                if (currentDot.isMatched)
+                {
+                    if (!currentDot.isColorBomb)
+                    {
+                        currentDot.isMatched = false;
+                        currentDot.MakeColorBomb();
+                    }
+                }
+                else
+                {
+                    if (currentDot.otherDot != null)
+                    {
+                        Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
+                        if (otherDot.isMatched)
+                        {
+                            if (!otherDot.isColorBomb)
+                            {
+                                otherDot.isMatched = false;
+                                otherDot.MakeColorBomb();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            //Make a adjacent bomb
+            //is the current dot matched?
+            if (currentDot != null)
+            {
+                if (currentDot.isMatched)
+                {
+                    if (!currentDot.isAdjacentBomb)
+                    {
+                        currentDot.isMatched = false;
+                        currentDot.MakeAdjacentBomb();
+                    }
+                }
+                else
+                {
+                    if (currentDot.otherDot != null)
+                    {
+                        Dot otherDot = currentDot.otherDot.GetComponent<Dot>();
+                        if (otherDot.isMatched)
+                        {
+                            if (!otherDot.isAdjacentBomb)
+                            {
+                                otherDot.isMatched = false;
+                                otherDot.MakeAdjacentBomb();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    */
 
     private void DestroyMatchesAt(int column, int row)
     {
@@ -597,7 +633,7 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 //if the current spot isn't blank and is empty. . . 
-                if (!blankSpaces[i, j] && allDots[i, j] == null)
+                if (!blankSpaces[i, j] && allDots[i, j] == null && !concreteTiles[i,j])
                 {
                     //loop from the space above to the top of the column
                     for (int k = j + 1; k < height; k++)
@@ -649,7 +685,7 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < height; j++)
             {
-                if (allDots[i, j] == null && !blankSpaces[i, j])
+                if (allDots[i, j] == null && !blankSpaces[i, j] && !concreteTiles[i,j])
                 {
                     Vector2 tempPosition = new Vector2(i, j + offSet);
                     int dotToUse = Random.Range(0, dots.Length);
@@ -717,12 +753,16 @@ public class Board : MonoBehaviour
 
     private void SwitchPieces(int column, int row, Vector2 direction)
     {
-        //Take the second piece and save it in a holder
-        GameObject holder = allDots[column + (int)direction.x, row + (int)direction.y] as GameObject;
-        //switching the first dot to be the second position
-        allDots[column + (int)direction.x, row + (int)direction.y] = allDots[column, row];
-        //Set the first dot to be the second dot
-        allDots[column, row] = holder;
+        if (allDots[column + (int)direction.x, row + (int)direction.y] != null)
+        {
+            //Take the second piece and save it in a holder
+            GameObject holder = allDots[column + (int)direction.x, row + (int)direction.y] as GameObject;
+            //switching the first dot to be the second position
+            allDots[column + (int)direction.x, row + (int)direction.y] = allDots[column, row];
+            //Set the first dot to be the second dot
+            allDots[column, row] = holder;
+        }
+
     }
 
     private bool CheckForMatches()
@@ -829,7 +869,7 @@ public class Board : MonoBehaviour
             for (int j = 0; j < height; j++)
             {
                 //if this spot shouldn't be blank
-                if (!blankSpaces[i, j])
+                if (!blankSpaces[i, j] && !concreteTiles[i,j])
                 {
                     //Pick a random number
                     int pieceToUse = Random.Range(0, newBoard.Count);
