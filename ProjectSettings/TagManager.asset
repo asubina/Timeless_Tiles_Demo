@@ -18,6 +18,9 @@ TagManager:
   - Purple Dot
   - Breakable
   - Board
+  - Concrete
+  - Lock
+  - Chocolate
   layers:
   - Default
   - TransparentFX
@@ -57,4 +60,7 @@ TagManager:
     locked: 0
   - name: Particles
     uniqueID: 1701559851
+    locked: 0
+  - name: Markers
+    uniqueID: 1158343619
     locked: 0

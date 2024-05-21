@@ -2493,6 +2493,10 @@ MonoBehaviour:
   tilePrefab: {fileID: 1170864395725264, guid: 95b01ab1c25c1442ea9585d69f994d33, type: 3}
   breakableTilePrefab: {fileID: 1216446781703624, guid: de9cb7887f5444daa871373abf678a3d,
     type: 3}
+  lockTilePrefab: {fileID: 8007424479319057383, guid: ecd6420418bb84e4e91fdda8dfecbf37,
+    type: 3}
+  concreteTilePrefab: {fileID: 8597956644291556445, guid: b59a6e612bbe7814da3591013f6bdedf,
+    type: 3}
   dots:
   - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
   - {fileID: 1200374735526922, guid: 3849a778f96364aa5977e89b41f1b22a, type: 3}
@@ -2502,6 +2506,9 @@ MonoBehaviour:
   destroyParticle: {fileID: 1498478433188360, guid: 5b79d2e07cbfc406f87a860648be289b,
     type: 3}
   boardLayout: []
+  matchType:
+    type: 0
+    color: 
   currentDot: {fileID: 0}
   basePieceValue: 20
   refillDelay: 0.5
