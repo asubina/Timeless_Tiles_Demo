@@ -431,34 +431,30 @@ public class Board : MonoBehaviour
     {
         for (int i = 0; i < width; i++)
         {
-            for (int j = 0; j < height; j++)
+            if (concreteTiles[i, row])
             {
-                if (concreteTiles[i, j])
+                concreteTiles[i, row].TakeDamage(1);
+                if (concreteTiles[i, row].hitPoints <= 0)
                 {
-                    concreteTiles[i, row].TakeDamage(1);
-                    if (concreteTiles[i, row].hitPoints <= 0)
-                    {
-                        concreteTiles[i, row] = null;
-                    }
+                    concreteTiles[i, row] = null;
                 }
             }
+
         }
     }
     public void BombColumn(int column)
     {
         for (int i = 0; i < width; i++)
         {
-            for (int j = 0; j < height; j++)
+            if (concreteTiles[column, i])
             {
-                if (concreteTiles[i, j])
+                concreteTiles[column, i].TakeDamage(1);
+                if (concreteTiles[column, i].hitPoints <= 0)
                 {
-                    concreteTiles[column, i].TakeDamage(1);
-                    if (concreteTiles[column, i].hitPoints <= 0)
-                    {
-                        concreteTiles[column, i] = null;
-                    }
+                    concreteTiles[column, i] = null;
                 }
             }
+
         }
     }
     /*
@@ -821,7 +817,9 @@ public class Board : MonoBehaviour
             Debug.Log("Deadlocked!!!");
         }
         yield return new WaitForSeconds(refillDelay);
-        currentState = GameState.move;
+        System.GC.Collect();
+        if(currentState != GameState.pause)
+            currentState = GameState.move;
         makeSlime = true;
         streakValue = 1;
 
