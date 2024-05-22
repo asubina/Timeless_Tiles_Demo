@@ -3,32 +3,35 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Add this line for scene management
 
 public enum GameType
 {
-    Moves, 
+    Moves,
     Time
 }
+
 [System.Serializable]
 public class EndGameRequirements
 {
     public GameType gameType;
     public int counterValue;
 }
+
 public class EndGameManager : MonoBehaviour
 {
-    
     public GameObject movesLabel;
     public GameObject timeLabel;
     public GameObject youWinPanel;
     public GameObject tryAgainPanel;
-    public Text counter; 
+    public Text counter;
 
     public EndGameRequirements requirements;
-    
+
     public int currentCounterValue;
     private Board board;
     private float timerSeconds;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,12 +39,12 @@ public class EndGameManager : MonoBehaviour
         SetGameType();
         SetupGame();
     }
-    
+
     void SetGameType()
     {
         if (board.world != null)
         {
-            if (board.level < board.world.levels.Length)  
+            if (board.level < board.world.levels.Length)
             {
                 if (board.world.levels[board.level] != null)
                 {
@@ -50,7 +53,7 @@ public class EndGameManager : MonoBehaviour
             }
         }
     }
-    
+
     void SetupGame()
     {
         currentCounterValue = requirements.counterValue;
@@ -67,10 +70,10 @@ public class EndGameManager : MonoBehaviour
         }
         counter.text = "" + currentCounterValue;
     }
-    
+
     public void DecreaseCounterValue()
     {
-        if(board.currentState != GameState.pause)
+        if (board.currentState != GameState.pause)
         {
             currentCounterValue--;
             counter.text = "" + currentCounterValue;
@@ -79,9 +82,8 @@ public class EndGameManager : MonoBehaviour
                 LoseGame();
             }
         }
-        
     }
-    
+
     public void WinGame()
     {
         youWinPanel.SetActive(true);
@@ -89,32 +91,39 @@ public class EndGameManager : MonoBehaviour
         counter.text = "" + currentCounterValue;
         FadePanelController fade = FindObjectOfType<FadePanelController>();
         fade.GameOver();
+
+        GoToLevelSelect(); // Call the method to transition to the Splash scene
     }
 
     public void LoseGame()
     {
         tryAgainPanel.SetActive(true);
         board.currentState = GameState.lose;
-        //Debug.Log("You Lose!");
         currentCounterValue = 0;
         counter.text = "" + currentCounterValue;
         FadePanelController fade = FindObjectOfType<FadePanelController>();
         fade.GameOver();
+
+        GoToLevelSelect(); // Call the method to transition to the Splash scene
     }
-    
+
+    void GoToLevelSelect()
+    {
+        PlayerPrefs.SetInt("GoToLevelSelect", 1); // Set a flag to indicate we want to go to Level Select
+        SceneManager.LoadScene("Splash"); // Load the Splash scene
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(requirements.gameType == GameType.Time && currentCounterValue > 0)
+        if (requirements.gameType == GameType.Time && currentCounterValue > 0)
         {
             timerSeconds -= Time.deltaTime;
-            if(timerSeconds <= 0)
+            if (timerSeconds <= 0)
             {
                 DecreaseCounterValue();
                 timerSeconds = 1;
             }
         }
     }
-    
 }

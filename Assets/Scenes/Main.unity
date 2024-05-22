@@ -1077,9 +1077,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 312620491}
-        m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
-        m_MethodName: WinOK
+      - m_Target: {fileID: 312620490}
+        m_TargetAssemblyTypeName: EndGameManager, Assembly-CSharp
+        m_MethodName: WinGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3182,9 +3182,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 312620491}
-        m_TargetAssemblyTypeName: BackToSplash, Assembly-CSharp
-        m_MethodName: LoseOK
+      - m_Target: {fileID: 312620490}
+        m_TargetAssemblyTypeName: EndGameManager, Assembly-CSharp
+        m_MethodName: LoseGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
