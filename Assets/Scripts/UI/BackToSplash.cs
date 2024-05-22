@@ -10,20 +10,20 @@ public class BackToSplash : MonoBehaviour
     private Board board;
     public void WinOK()
     {
-        if(gameData != null)
+        if (gameData != null)
         {
             gameData.saveData.isActive[board.level + 1] = true;
             gameData.Save();
         }
         SceneManager.LoadScene(sceneToLoad);
     }
-    
+
     public void LoseOK()
     {
         SceneManager.LoadScene(sceneToLoad);
     }
 
-        // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
         gameData = FindObjectOfType<GameData>();
@@ -33,6 +33,6 @@ public class BackToSplash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

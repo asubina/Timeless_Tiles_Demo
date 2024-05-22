@@ -21,6 +21,7 @@ TagManager:
   - Concrete
   - Lock
   - Chocolate
+  - Level Select
   layers:
   - Default
   - TransparentFX
