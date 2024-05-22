@@ -2497,6 +2497,8 @@ MonoBehaviour:
     type: 3}
   concreteTilePrefab: {fileID: 8597956644291556445, guid: b59a6e612bbe7814da3591013f6bdedf,
     type: 3}
+  slimePiecePrefab: {fileID: 3107503496270424519, guid: 7b8936ba81e8e3641a73858a49cbff9a,
+    type: 3}
   dots:
   - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
   - {fileID: 1200374735526922, guid: 3849a778f96364aa5977e89b41f1b22a, type: 3}
