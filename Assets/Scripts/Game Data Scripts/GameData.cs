@@ -90,6 +90,15 @@ public class GameData : MonoBehaviour
         Save();
     }
 
+    public void ResetData()
+    {
+        // Reset the save data
+        saveData.stars = new int[saveData.stars.Length];
+        saveData.highScore = new int[saveData.highScore.Length];
+        // Save the reset data if needed
+        Save();
+    }
+
     // Update is called once per frame
     void Update()
     {

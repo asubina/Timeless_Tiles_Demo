@@ -1035,7 +1035,7 @@ MonoBehaviour:
   - {fileID: 325899348}
   - {fileID: 1750673402}
   levelText: {fileID: 285837674}
-  level: 2
+  level: 5
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &156379477
 MonoBehaviour:
@@ -2680,6 +2680,7 @@ MonoBehaviour:
   levelPanel1: {fileID: 919122465}
   levelPanel2: {fileID: 1880786263}
   levelPanel3: {fileID: 1332302978}
+  confirmPanel: {fileID: 935508773}
 --- !u!1 &528069761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2875,7 +2876,7 @@ MonoBehaviour:
   - {fileID: 623375051}
   - {fileID: 209806682}
   levelText: {fileID: 407917799}
-  level: 1
+  level: 4
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &533474066
 MonoBehaviour:
@@ -4578,7 +4579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &919122466
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4679,10 +4680,10 @@ RectTransform:
   - {fileID: 1078055817}
   m_Father: {fileID: 191777625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 188.38106, y: -301.5507}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &919887953
 MonoBehaviour:
@@ -5131,6 +5132,13 @@ MonoBehaviour:
   - {fileID: 393948168}
   highScoreText: {fileID: 1803980839}
   starText: {fileID: 62518951}
+  otherPanels:
+  - {fileID: 919122465}
+  - {fileID: 1880786263}
+  - {fileID: 1332302978}
+  - {fileID: 666262712}
+  - {fileID: 1909775109}
+  - {fileID: 1027351199}
 --- !u!1 &976662030
 GameObject:
   m_ObjectHideFlags: 0
@@ -5956,7 +5964,7 @@ MonoBehaviour:
   - {fileID: 924328435}
   - {fileID: 976662032}
   levelText: {fileID: 732588572}
-  level: 3
+  level: 6
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &1052697211
 MonoBehaviour:
@@ -6495,7 +6503,7 @@ MonoBehaviour:
   - {fileID: 1884757731}
   - {fileID: 2110996999}
   levelText: {fileID: 536194136}
-  level: 1
+  level: 7
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &1118396316
 MonoBehaviour:
@@ -6729,7 +6737,7 @@ MonoBehaviour:
   - {fileID: 1629699450}
   - {fileID: 667112126}
   levelText: {fileID: 557627885}
-  level: 3
+  level: 9
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &1171404315
 MonoBehaviour:
@@ -8894,9 +8902,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 935508777}
-        m_TargetAssemblyTypeName: ConfirmPannel, Assembly-CSharp
-        m_MethodName: Cancel
+      - m_Target: {fileID: 495130707}
+        m_TargetAssemblyTypeName: PanelSwitcher, Assembly-CSharp
+        m_MethodName: ShowDesignPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11026,10 +11034,10 @@ RectTransform:
   - {fileID: 1308441363}
   m_Father: {fileID: 191777625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 68.38106, y: -301.5507}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817178460
 MonoBehaviour:
@@ -11210,7 +11218,7 @@ MonoBehaviour:
   - {fileID: 978083788}
   - {fileID: 1139835731}
   levelText: {fileID: 1437784275}
-  level: 2
+  level: 8
   confirmPanelObject: {fileID: 935508773}
 --- !u!114 &1830027202
 MonoBehaviour:
@@ -11707,10 +11715,10 @@ RectTransform:
   - {fileID: 1567717232}
   m_Father: {fileID: 191777625}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 308.38104, y: -301.5507}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890463267
 MonoBehaviour:

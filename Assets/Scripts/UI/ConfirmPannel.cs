@@ -17,9 +17,11 @@ public class ConfirmPannel : MonoBehaviour
     public Image[] stars;
     public Text highScoreText;
     public Text starText;
-    
+
+    public GameObject[] otherPanels;
+
     public int Level { get => level; set => level = value; }
- 
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -27,11 +29,12 @@ public class ConfirmPannel : MonoBehaviour
         LoadData();
         ActivateStars();
         SetText();
+        DisableOtherPanels();
     }
 
     void LoadData()
     {
-        if(gameData != null)
+        if (gameData != null)
         {
             starsActive = gameData.saveData.stars[level - 1];
             highScore = gameData.saveData.highScore[level - 1];
@@ -43,6 +46,7 @@ public class ConfirmPannel : MonoBehaviour
         highScoreText.text = "" + highScore;
         starText.text = "" + starsActive + "/3";
     }
+
     void ActivateStars()
     {
         for (int i = 0; i < starsActive; i++)
@@ -51,11 +55,20 @@ public class ConfirmPannel : MonoBehaviour
         }
     }
 
+    void DisableOtherPanels()
+    {
+        foreach (GameObject panel in otherPanels)
+        {
+            panel.SetActive(false);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
 
     }
+
     public void Cancel()
     {
         this.gameObject.SetActive(false);
@@ -63,7 +76,7 @@ public class ConfirmPannel : MonoBehaviour
 
     public void Play()
     {
-        PlayerPrefs.SetInt("Current Level", level -1);
+        PlayerPrefs.SetInt("Current Level", level - 1);
         SceneManager.LoadScene(levelToLoad);
     }
 }

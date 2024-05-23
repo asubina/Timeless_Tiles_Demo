@@ -10,13 +10,14 @@ public class PanelSwitcher : MonoBehaviour
     public GameObject levelPanel1;
     public GameObject levelPanel2;
     public GameObject levelPanel3;
+    public GameObject confirmPanel;
 
     private List<GameObject> panels;
 
     void Start()
     {
         // Initialize the list of panels
-        panels = new List<GameObject> { startPanel, designPanel, rulesPanel, levelPanel1, levelPanel2, levelPanel3 };
+        panels = new List<GameObject> { startPanel, designPanel, rulesPanel, levelPanel1, levelPanel2, levelPanel3, confirmPanel };
 
         // Optionally, set the initial panel to be active
         ShowPanel(startPanel); // Or whichever panel you want to be the default
