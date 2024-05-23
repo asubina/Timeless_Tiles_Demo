@@ -7,59 +7,60 @@ public class PanelSwitcher : MonoBehaviour
     public GameObject startPanel;
     public GameObject designPanel;
     public GameObject rulesPanel;
-    public GameObject levelPanel;
+    public GameObject levelPanel1;
+    public GameObject levelPanel2;
+    public GameObject levelPanel3;
+
+    private List<GameObject> panels;
 
     void Start()
     {
-        // Optionally, you can set the initial panel to be active
-        ShowStartPanel(); // Or whichever panel you want to be the default
+        // Initialize the list of panels
+        panels = new List<GameObject> { startPanel, designPanel, rulesPanel, levelPanel1, levelPanel2, levelPanel3 };
+
+        // Optionally, set the initial panel to be active
+        ShowPanel(startPanel); // Or whichever panel you want to be the default
     }
 
+    public void ShowPanel(GameObject panelToShow)
+    {
+        foreach (GameObject panel in panels)
+        {
+            if (panel != null)
+            {
+                panel.SetActive(panel == panelToShow);
+            }
+        }
+    }
+
+    // The methods below can be linked to the corresponding buttons
     public void ShowStartPanel()
     {
-        if (startPanel != null && designPanel != null && levelPanel != null && rulesPanel != null)
-        {
-            startPanel.SetActive(true);
-            designPanel.SetActive(false);
-            levelPanel.SetActive(false);
-            rulesPanel.SetActive(false);
-            // Debug.Log("ShowStartPanel: Start panel activated, Design and Level panels deactivated.");
-        }
+        ShowPanel(startPanel);
     }
 
     public void ShowDesignPanel()
     {
-        if (designPanel != null && startPanel != null && levelPanel != null && rulesPanel != null)
-        {
-            designPanel.SetActive(true);
-            startPanel.SetActive(false);
-            levelPanel.SetActive(false);
-            rulesPanel.SetActive(false);
-            // Debug.Log("ShowDesignPanel: Design panel activated, Start and Level panels deactivated.");
-        }
-    }
-
-    public void ShowLevelPanel()
-    {
-        if (levelPanel != null && startPanel != null && designPanel != null && rulesPanel != null)
-        {
-            levelPanel.SetActive(true);
-            startPanel.SetActive(false);
-            designPanel.SetActive(false);
-            rulesPanel.SetActive (false);
-            // Debug.Log("ShowLevelPanel: Level panel activated, Start and Design panels deactivated.");
-        }
+        ShowPanel(designPanel);
     }
 
     public void ShowRulesPanel()
     {
-        if(startPanel != null && designPanel != null && levelPanel != null && rulesPanel != null)
-        {
-            rulesPanel.SetActive(true);
-            startPanel.SetActive(false);
-            designPanel.SetActive(false);
-            levelPanel.SetActive(false);
+        ShowPanel(rulesPanel);
+    }
 
-        }
+    public void ShowLevelPanel1()
+    {
+        ShowPanel(levelPanel1);
+    }
+
+    public void ShowLevelPanel2()
+    {
+        ShowPanel(levelPanel2);
+    }
+
+    public void ShowLevelPanel3()
+    {
+        ShowPanel(levelPanel3);
     }
 }
