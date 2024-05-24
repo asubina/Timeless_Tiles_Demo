@@ -16,11 +16,11 @@ MonoBehaviour:
   height: 6
   boardLayout: []
   dots:
-  - {fileID: 1364587841334750, guid: f8bd37a7d383940dbbc740c1a5e917b3, type: 3}
-  - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
-  - {fileID: 1200374735526922, guid: 3849a778f96364aa5977e89b41f1b22a, type: 3}
-  - {fileID: 1954689237764068, guid: bc3c53142e6b44bab81c765f6ba5b2e8, type: 3}
-  - {fileID: 1223371761558328, guid: 6f67e2d9c76474888bca2643873cd298, type: 3}
+  - {fileID: 6963297126559138639, guid: 3fea3ecce1c230c4fa8beb9d894108d4, type: 3}
+  - {fileID: 8773218108389103021, guid: 42f2cb12ab6fb814bad3bf5b7ad039ee, type: 3}
+  - {fileID: 7059679524506988771, guid: 315d0ef59ac24ef49a1ed370be3b7fcd, type: 3}
+  - {fileID: 829600528413036061, guid: 4704f0742fd38f74f859d9a6c01d94f8, type: 3}
+  - {fileID: 6863642553491114674, guid: 96dfca1b2c14b6d4b9e042f60fb4f4b3, type: 3}
   scoreGoals: 851a00002e16000007870000
   endGameRequirements:
     gameType: 1
@@ -28,9 +28,9 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 6
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 549d8d63d7da17a45a8accf250e7bb29, type: 3}
+    goalSprite: {fileID: 21300000, guid: ca4f7d6d88e0c56468a974ce56a13a67, type: 3}
     matchValue: Green Dot
   - numberNeeded: 5
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 05c03a1e16ea6d94ba6a9e87ac6788c2, type: 3}
+    goalSprite: {fileID: 21300000, guid: 5c8695c500d6f434db03d18e94f885fc, type: 3}
     matchValue: Red Dot
