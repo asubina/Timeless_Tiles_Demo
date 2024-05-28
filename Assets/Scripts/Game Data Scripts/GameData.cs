@@ -60,6 +60,7 @@ public class GameData : MonoBehaviour
     public void Load()
     {
         //Check if the save game file exists
+        
         if (File.Exists(Application.persistentDataPath + "/player.dat"))
         {
             //Create a binary formatter
@@ -70,12 +71,14 @@ public class GameData : MonoBehaviour
             //Debug.Log("Loaded");
         }
         else
-        {
+        { 
             saveData = new SaveData();
-            saveData.isActive = new bool[100];
-            saveData.stars = new int[100];
-            saveData.highScore = new int[100];
+            saveData.isActive = new bool[9];
+            saveData.stars = new int[9];
+            saveData.highScore = new int[9];
             saveData.isActive[0] = true;
+            saveData.isActive[3] = true;
+            saveData.isActive[6] = true;
         }
   
     }
@@ -92,11 +95,11 @@ public class GameData : MonoBehaviour
 
     public void ResetData()
     {
-        // Reset the save data
-        saveData.stars = new int[saveData.stars.Length];
-        saveData.highScore = new int[saveData.highScore.Length];
-        // Save the reset data if needed
-        Save();
+        if (File.Exists(Application.persistentDataPath + "/player.dat"))
+        {
+            File.Delete(Application.persistentDataPath + "/player.dat");
+        }
+        Load();
     }
 
     // Update is called once per frame

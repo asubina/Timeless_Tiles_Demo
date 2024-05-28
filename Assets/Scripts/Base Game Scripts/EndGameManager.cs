@@ -20,6 +20,7 @@ public class EndGameRequirements
 
 public class EndGameManager : MonoBehaviour
 {
+    private GameData gameData;
     public GameObject movesLabel;
     public GameObject timeLabel;
     public GameObject youWinPanel;
@@ -36,6 +37,7 @@ public class EndGameManager : MonoBehaviour
     void Start()
     {
         board = FindObjectOfType<Board>();
+        gameData = FindObjectOfType<GameData>();
         SetGameType();
         SetupGame();
     }
@@ -86,17 +88,23 @@ public class EndGameManager : MonoBehaviour
 
     public void WinGame()
     {
+        if (gameData != null)
+        {
+            gameData.saveData.isActive[board.level + 1] = true;
+            gameData.Save();
+        }
         youWinPanel.SetActive(true);
         board.currentState = GameState.win;
         counter.text = "" + currentCounterValue;
         FadePanelController fade = FindObjectOfType<FadePanelController>();
         fade.GameOver();
 
-        GoToLevelSelect(); // Call the method to transition to the Splash scene
+        //GoToLevelSelect(); // Call the method to transition to the Splash scene
     }
 
     public void LoseGame()
     {
+
         tryAgainPanel.SetActive(true);
         board.currentState = GameState.lose;
         currentCounterValue = 0;
@@ -104,13 +112,26 @@ public class EndGameManager : MonoBehaviour
         FadePanelController fade = FindObjectOfType<FadePanelController>();
         fade.GameOver();
 
-        GoToLevelSelect(); // Call the method to transition to the Splash scene
+        //GoToLevelSelect(); // Call the method to transition to the Splash scene
     }
 
-    void GoToLevelSelect()
+     public void GoToLevelSelect()
     {
         PlayerPrefs.SetInt("GoToLevelSelect", 1); // Set a flag to indicate we want to go to Level Select
         SceneManager.LoadScene("Splash"); // Load the Splash scene
+    }
+
+    public void GoToNextLevel()
+    {
+        if (board.level % 3 == 2)
+        {
+            GoToLevelSelect();
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Current Level", board.level + 1);
+            SceneManager.LoadScene(board.level / 3 + 1);
+        }
     }
 
     // Update is called once per frame

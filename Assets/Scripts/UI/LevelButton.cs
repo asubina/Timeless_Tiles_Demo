@@ -80,7 +80,7 @@ public class LevelButton : MonoBehaviour
 
     void ShowLevel()
     {
-        levelText.text = "" + level;
+        levelText.text = "" + (level % 3  == 0 ? 3 : level % 3);
     }
 
     // Update is called once per frame
