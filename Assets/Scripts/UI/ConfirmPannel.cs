@@ -77,6 +77,19 @@ public class ConfirmPannel : MonoBehaviour
     public void Play()
     {
         PlayerPrefs.SetInt("Current Level", level - 1);
-        SceneManager.LoadScene(levelToLoad);
+        string scene;
+        if (level < 4)
+        {
+            scene = "Main";
+        }
+        else if (level < 6)
+        {
+            scene = "Main 1";
+        }
+        else
+        {
+            scene = "Candy";
+        }
+        SceneManager.LoadScene(scene);
     }
 }
