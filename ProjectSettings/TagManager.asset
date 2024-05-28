@@ -23,6 +23,11 @@ TagManager:
   - Chocolate
   - Level Select
   - Start
+  - D_Blue
+  - D_Yellow
+  - D_Purple
+  - D_Red
+  - D_Green
   layers:
   - Default
   - TransparentFX
