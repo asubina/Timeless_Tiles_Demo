@@ -14,10 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main 1.unity
     guid: 7ca5689ac882847489d1a91b6ef2360a
-  - enabled: 0
-    path: Assets/Scenes/Bejeweled.unity
-    guid: 2e551c5111388fc468953bd4b92d10da
   - enabled: 1
-    path: Assets/Scenes/Candy.unity
-    guid: 2d9465a1e8cf0d64392bbceefb8efa5c
+    path: Assets/Scenes/Main 2.unity
+    guid: 74bf87b99f3487a4a919b0cfaf393bea
   m_configObjects: {}

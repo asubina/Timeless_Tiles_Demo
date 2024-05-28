@@ -88,7 +88,7 @@ public class ConfirmPannel : MonoBehaviour
         }
         else
         {
-            scene = "Candy";
+            scene = "Main 2";
         }
         SceneManager.LoadScene(scene);
     }

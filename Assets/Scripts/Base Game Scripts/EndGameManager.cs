@@ -123,14 +123,16 @@ public class EndGameManager : MonoBehaviour
 
     public void GoToNextLevel()
     {
-        if (board.level % 3 == 2)
+        if (board.level == 2 || board.level == 5 || board.level == 8)
         {
             GoToLevelSelect();
+            Debug.Log("Level Select");
         }
         else
         {
             PlayerPrefs.SetInt("Current Level", board.level + 1);
             SceneManager.LoadScene(board.level / 3 + 1);
+            Debug.Log(board.level);
         }
     }
 

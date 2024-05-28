@@ -73,9 +73,9 @@ public class GameData : MonoBehaviour
         else
         { 
             saveData = new SaveData();
-            saveData.isActive = new bool[9];
-            saveData.stars = new int[9];
-            saveData.highScore = new int[9];
+            saveData.isActive = new bool[100];
+            saveData.stars = new int[100];
+            saveData.highScore = new int[100];
             saveData.isActive[0] = true;
             saveData.isActive[3] = true;
             saveData.isActive[6] = true;
