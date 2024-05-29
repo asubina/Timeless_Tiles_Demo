@@ -78,17 +78,21 @@ public class ConfirmPannel : MonoBehaviour
     {
         PlayerPrefs.SetInt("Current Level", level - 1);
         string scene;
+        Debug.Log("Level = " + level);
         if (level < 4)
         {
             scene = "Main";
+            Debug.Log("Tetris");
         }
         else if (level < 6)
         {
             scene = "Main 1";
+            Debug.Log("Bejeweled");
         }
         else
         {
             scene = "Main 2";
+            Debug.Log("Candy");
         }
         SceneManager.LoadScene(scene);
     }

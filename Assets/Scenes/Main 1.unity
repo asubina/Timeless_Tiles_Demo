@@ -2097,15 +2097,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92cbd0bdbcff4544a1642f09bdbadbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelGoals:
-  - numberNeeded: 5
-    numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 05c03a1e16ea6d94ba6a9e87ac6788c2, type: 3}
-    matchValue: Red Dot
-  - numberNeeded: 5
-    numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 549d8d63d7da17a45a8accf250e7bb29, type: 3}
-    matchValue: Green Dot
+  levelGoals: []
   currentGoals: []
   goalPrefab: {fileID: 1014970395753795905, guid: 526f8ee051b161a448b56dc30df197ef,
     type: 3}
@@ -3083,7 +3075,6 @@ Transform:
   - {fileID: 1031179155}
   - {fileID: 312620489}
   - {fileID: 1453605672}
-  - {fileID: 1551498634}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1505387037
@@ -3465,37 +3456,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1551498633
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1551498634}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1551498634
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551498633}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1505387036}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1763679456
 GameObject:
   m_ObjectHideFlags: 0
@@ -4342,7 +4302,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1845560773}
   - {fileID: 1967009338}
+  - {fileID: 1505387036}
   - {fileID: 157063438}
   - {fileID: 1096031343}
   - {fileID: 232221692}
-  - {fileID: 1505387036}

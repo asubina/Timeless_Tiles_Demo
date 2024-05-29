@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5021269241624501523}
   m_Layer: 0
   m_Name: Jewel_Purple
-  m_TagString: Purple Dot
+  m_TagString: D_Purple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
