@@ -120,13 +120,13 @@ public class EndGameManager : MonoBehaviour
         PlayerPrefs.SetInt("GoToLevelSelect", 1); // Set a flag to indicate we want to go to Level Select
         SceneManager.LoadScene("Splash"); // Load the Splash scene
     }
-    /*
+    
     public void ReloadLevel()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
     }
-    */
+    
     public void GoToNextLevel()
     {
         if (board.level == 2 || board.level == 5 || board.level == 8)
