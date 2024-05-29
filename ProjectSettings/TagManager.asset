@@ -28,6 +28,11 @@ TagManager:
   - D_Purple
   - D_Red
   - D_Green
+  - F_Blue
+  - F_Green
+  - F_Yellow
+  - F_Peach
+  - F_Pink
   layers:
   - Default
   - TransparentFX
