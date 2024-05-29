@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 114726378684682946}
   m_Layer: 0
   m_Name: Purple Dot
-  m_TagString: Teal Dot
+  m_TagString: Purple Dot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 557a5b690aebfb144ba4b97f38d35a18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8fbe612b4a27c1a488e1f4f422501cd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

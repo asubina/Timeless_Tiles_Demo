@@ -19,13 +19,17 @@ MonoBehaviour:
   - {fileID: 1200374735526922, guid: 3849a778f96364aa5977e89b41f1b22a, type: 3}
   - {fileID: 1954689237764068, guid: bc3c53142e6b44bab81c765f6ba5b2e8, type: 3}
   - {fileID: 1032542754878642, guid: 68f0f34c7c6894c5489e9ed80463f5d1, type: 3}
-  - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
+  - {fileID: 1886600490702098, guid: 28a0ed689e40444bf86965998f5f1e1a, type: 3}
   scoreGoals: c80000009001000058020000
   endGameRequirements:
     gameType: 1
-    counterValue: 100
+    counterValue: 30
   levelGoals:
+  - numberNeeded: 7
+    numberCollected: 0
+    goalSprite: {fileID: 21300000, guid: 3029064ba7fa29340983af7d58d307ce, type: 3}
+    matchValue: Green Dot
   - numberNeeded: 5
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 549d8d63d7da17a45a8accf250e7bb29, type: 3}
-    matchValue: Green Dot
+    goalSprite: {fileID: 21300000, guid: 8fbe612b4a27c1a488e1f4f422501cd5, type: 3}
+    matchValue: Purple Dot
