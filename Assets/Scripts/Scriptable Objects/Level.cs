@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "World", menuName = "Level")]
+
 public class Level : ScriptableObject
 {
+    public string levelName;
+    public int difficulty;
+
     [Header("Board Dimensions")]
     public int width;
     public int height;

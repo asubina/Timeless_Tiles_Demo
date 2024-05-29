@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2094576216107923825}
   - component: {fileID: 485926532785077465}
   - component: {fileID: -3126130833717814496}
+  - component: {fileID: 5021269241624501523}
   m_Layer: 0
   m_Name: Jewel_Purple
   m_TagString: Purple Dot
@@ -111,7 +112,44 @@ MonoBehaviour:
   isColumnBomb: 0
   isRowBomb: 0
   isAdjacentBomb: 0
-  adjacentMarker: {fileID: 0}
-  rowArrow: {fileID: 0}
-  columnArrow: {fileID: 0}
-  colorBomb: {fileID: 0}
+  adjacentMarker: {fileID: 1746358072909436, guid: 2846699cebe8b4e93b485c0962edd52a,
+    type: 3}
+  rowArrow: {fileID: 1775534601444322, guid: a10db065bdfa54e23bf91be31858fa5d, type: 3}
+  columnArrow: {fileID: 1629322208613970, guid: 36f4acc9beec24301a6fe1acfc05a567,
+    type: 3}
+  colorBomb: {fileID: 1942758963516802, guid: 127ce63b5911c45abae4b1dde87e05da, type: 3}
+--- !u!58 &5021269241624501523
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2292803548332801384}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.33103758

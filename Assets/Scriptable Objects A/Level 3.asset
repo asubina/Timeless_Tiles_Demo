@@ -12,25 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f3598a2ff95f34d86cd7cb506d4b44, type: 3}
   m_Name: Level 3
   m_EditorClassIdentifier: 
-  width: 8
+  levelName: 
+  difficulty: 0
+  width: 6
   height: 6
   boardLayout: []
   dots:
-  - {fileID: 5940012984741979510, guid: 3fea3ecce1c230c4fa8beb9d894108d4, type: 3}
-  - {fileID: 4170781125427739140, guid: 96dfca1b2c14b6d4b9e042f60fb4f4b3, type: 3}
-  - {fileID: 2292803548332801384, guid: 4704f0742fd38f74f859d9a6c01d94f8, type: 3}
-  - {fileID: 6890700988507406759, guid: 42f2cb12ab6fb814bad3bf5b7ad039ee, type: 3}
-  - {fileID: 3492860996243527419, guid: 315d0ef59ac24ef49a1ed370be3b7fcd, type: 3}
-  scoreGoals: e8030000d0070000b80b0000
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  scoreGoals: 
   endGameRequirements:
-    gameType: 1
-    counterValue: 100
-  levelGoals:
-  - numberNeeded: 6
-    numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: ca4f7d6d88e0c56468a974ce56a13a67, type: 3}
-    matchValue: D_Green
-  - numberNeeded: 5
-    numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 5c8695c500d6f434db03d18e94f885fc, type: 3}
-    matchValue: D_Red
+    gameType: 0
+    counterValue: 0
+  levelGoals: []
