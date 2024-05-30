@@ -282,13 +282,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 467436238}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 467436240}
+        m_TargetAssemblyTypeName: GameData, Assembly-CSharp
+        m_MethodName: ResetData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -656,7 +656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5675647, y: 0.61046076}
   m_AnchorMax: {x: 0.779274, y: 0.7795393}
-  m_AnchoredPosition: {x: 2.2319984, y: -0.12239075}
+  m_AnchoredPosition: {x: 2.2320023, y: -0.12239075}
   m_SizeDelta: {x: 4.9842987, y: -0.24480009}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &62518954
@@ -8523,7 +8523,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.09, y: 0.6406261}
   m_AnchorMax: {x: 0.90400004, y: 0.83562607}
-  m_AnchoredPosition: {x: -0.0012969971, y: 1.0099945}
+  m_AnchoredPosition: {x: -0.0013122559, y: 1.0099945}
   m_SizeDelta: {x: -5.75, y: -0.27000427}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419185436
