@@ -16,11 +16,11 @@ MonoBehaviour:
   height: 8
   boardLayout: []
   dots:
-  - {fileID: 5940012984741979510, guid: 3fea3ecce1c230c4fa8beb9d894108d4, type: 3}
-  - {fileID: 4170781125427739140, guid: 96dfca1b2c14b6d4b9e042f60fb4f4b3, type: 3}
-  - {fileID: 2292803548332801384, guid: 4704f0742fd38f74f859d9a6c01d94f8, type: 3}
-  - {fileID: 6890700988507406759, guid: 42f2cb12ab6fb814bad3bf5b7ad039ee, type: 3}
-  - {fileID: 3492860996243527419, guid: 315d0ef59ac24ef49a1ed370be3b7fcd, type: 3}
+  - {fileID: 2833690585465733578, guid: e5864007590979c4f90cd932277050b1, type: 3}
+  - {fileID: 5473368772198263550, guid: a4a7718eae4f13c4fb690d71f1f48d9e, type: 3}
+  - {fileID: 7805573506222744004, guid: ce9f1773f0ef5134ca62f440bee13aff, type: 3}
+  - {fileID: 6423353920849855466, guid: e5c5bb57144aed9409f00514a19aa2a6, type: 3}
+  - {fileID: 7218892318279219082, guid: 4e88f915c18ce8c43bf4687fcc85ad98, type: 3}
   scoreGoals: 2c0100005802000084030000
   endGameRequirements:
     gameType: 0

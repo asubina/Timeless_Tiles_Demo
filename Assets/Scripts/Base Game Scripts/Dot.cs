@@ -169,6 +169,16 @@ public class Dot : MonoBehaviour
 
     }
 
+    static Dot _LastPressedDot = null;
+    static Dot _PrevPressedDot = null;
+
+    static bool DotPressed(Dot dotObject)
+    {
+        _PrevPressedDot = _LastPressedDot;
+        _LastPressedDot = dotObject;
+        return (_LastPressedDot != _PrevPressedDot) && _PrevPressedDot != null;
+
+    }
     private void OnMouseDown()
     {
         //Destroy the hint
@@ -185,28 +195,68 @@ public class Dot : MonoBehaviour
 
     private void OnMouseUp()
     {
+        // if (PressModeUsed)
+        // {
+        //   PressModeUsed=false;
+        //   WaitingFor2ndPress=false;
+        //   return;
+        // }
         if (board.currentState == GameState.move)
         {
             finalTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            CalculateAngle();
+            bool swipe = CalculateAngle();
+            if (!swipe)
+            {
+                if (DotPressed(this))
+                {
+                    //Debug.Log("activating alternative input");
+                    _PrevPressedDot.firstTouchPosition = _PrevPressedDot.transform.position;
+                    _PrevPressedDot.finalTouchPosition = _LastPressedDot.transform.position;
+                    //Debug.Log("first: " + _PrevPressedDot.name);
+                    //Debug.Log("second: " + _LastPressedDot.name);
+
+                    //Debug.Log("A: "+ _PrevPressedDot.firstTouchPosition + " B: "+ _PrevPressedDot.finalTouchPosition);
+                    if (_PrevPressedDot.CalculateAngle2())
+                    {
+                        _PrevPressedDot = null;
+                        _LastPressedDot = null;
+                    }
+                }
+
+            }
         }
     }
 
-    void CalculateAngle()
+    bool CalculateAngle()
     {
         if (Mathf.Abs(finalTouchPosition.y - firstTouchPosition.y) > swipeResist || Mathf.Abs(finalTouchPosition.x - firstTouchPosition.x) > swipeResist)
         {
             board.currentState = GameState.wait;
             swipeAngle = Mathf.Atan2(finalTouchPosition.y - firstTouchPosition.y, finalTouchPosition.x - firstTouchPosition.x) * 180 / Mathf.PI;
             MovePieces();
-
             board.currentDot = this;
-
+            return true;
         }
         else
         {
             board.currentState = GameState.move;
-
+            return false;
+        }
+    }
+    bool CalculateAngle2()
+    {
+        if (Mathf.Abs(finalTouchPosition.y - firstTouchPosition.y) > 0.5 || Mathf.Abs(finalTouchPosition.x - firstTouchPosition.x) > 0.5f)
+        {
+            board.currentState = GameState.wait;
+            swipeAngle = Mathf.Atan2(finalTouchPosition.y - firstTouchPosition.y, finalTouchPosition.x - firstTouchPosition.x) * 180 / Mathf.PI;
+            MovePieces();
+            board.currentDot = this;
+            return true;
+        }
+        else
+        {
+            board.currentState = GameState.move;
+            return false;
         }
     }
 
