@@ -2481,12 +2481,12 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 5
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 05c03a1e16ea6d94ba6a9e87ac6788c2, type: 3}
-    matchValue: Red Dot
+    goalSprite: {fileID: 21300000, guid: 32d755335bc36784ab19354cc3498f7a, type: 3}
+    matchValue: F_Blue
   - numberNeeded: 5
     numberCollected: 0
-    goalSprite: {fileID: 21300000, guid: 549d8d63d7da17a45a8accf250e7bb29, type: 3}
-    matchValue: Green Dot
+    goalSprite: {fileID: 21300000, guid: b178ea9e809ff3a4c96de778c6867461, type: 3}
+    matchValue: F_Green
   currentGoals: []
   goalPrefab: {fileID: 1014970395753795905, guid: 526f8ee051b161a448b56dc30df197ef,
     type: 3}
@@ -3427,7 +3427,7 @@ MonoBehaviour:
   height: 8
   offSet: 10
   tilePrefab: {fileID: 1170864395725264, guid: 95b01ab1c25c1442ea9585d69f994d33, type: 3}
-  breakableTilePrefab: {fileID: 1216446781703624, guid: de9cb7887f5444daa871373abf678a3d,
+  breakableTilePrefab: {fileID: 7985818214403828953, guid: 623167f13c927f244a751a1875618018,
     type: 3}
   lockTilePrefab: {fileID: 8007424479319057383, guid: ecd6420418bb84e4e91fdda8dfecbf37,
     type: 3}
@@ -3436,11 +3436,11 @@ MonoBehaviour:
   slimePiecePrefab: {fileID: 3107503496270424519, guid: 7b8936ba81e8e3641a73858a49cbff9a,
     type: 3}
   dots:
-  - {fileID: 1370519727947204, guid: 3e5400e8fc24b4814b35c2404bea18b6, type: 3}
-  - {fileID: 1200374735526922, guid: 3849a778f96364aa5977e89b41f1b22a, type: 3}
-  - {fileID: 1886600490702098, guid: 28a0ed689e40444bf86965998f5f1e1a, type: 3}
-  - {fileID: 1954689237764068, guid: bc3c53142e6b44bab81c765f6ba5b2e8, type: 3}
-  - {fileID: 1032542754878642, guid: 68f0f34c7c6894c5489e9ed80463f5d1, type: 3}
+  - {fileID: 2833690585465733578, guid: e5864007590979c4f90cd932277050b1, type: 3}
+  - {fileID: 7218892318279219082, guid: 4e88f915c18ce8c43bf4687fcc85ad98, type: 3}
+  - {fileID: 7805573506222744004, guid: ce9f1773f0ef5134ca62f440bee13aff, type: 3}
+  - {fileID: 6423353920849855466, guid: e5c5bb57144aed9409f00514a19aa2a6, type: 3}
+  - {fileID: 5473368772198263550, guid: a4a7718eae4f13c4fb690d71f1f48d9e, type: 3}
   destroyParticle: {fileID: 106898452320889437, guid: 1878896ff0b31054ebeac5f35d48bcf9,
     type: 3}
   boardLayout: []
@@ -3484,7 +3484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12fdcdb63fd34b7a8c210ca5cd25fc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hintDelay: 1000
+  hintDelay: 1e+12
   hintParticle: {fileID: 1747983102133552, guid: f34bce244cdcd48b6ada28854e88b5cb,
     type: 3}
   currentHint: {fileID: 0}
@@ -4034,7 +4034,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1763679457
 RectTransform:
   m_ObjectHideFlags: 0
