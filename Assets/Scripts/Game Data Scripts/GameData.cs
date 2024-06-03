@@ -5,7 +5,6 @@ using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
-
 [Serializable]
 public class SaveData
 {
@@ -18,75 +17,74 @@ public class GameData : MonoBehaviour
 {
     public static GameData gameData;
     public SaveData saveData;
-    // Start is called before the first frame update
+
     void Awake()
     {
         if (gameData == null)
         {
             DontDestroyOnLoad(this.gameObject);
             gameData = this;
+            InitializeSaveData(); // Ensure saveData is initialized
+            Load();
         }
         else
         {
             Destroy(this.gameObject);
         }
-        Load();
-
     }
+
     private void Start()
     {
+        // Additional start logic if needed
+    }
 
+    private void InitializeSaveData()
+    {
+        saveData = new SaveData();
+        saveData.isActive = new bool[100];
+        saveData.stars = new int[100];
+        saveData.highScore = new int[100];
+        saveData.isActive[0] = true;
+        saveData.isActive[3] = true;
+        saveData.isActive[6] = true;
     }
 
     public void Save()
     {
-        //Create a binary formatter which can read binary files
         BinaryFormatter formatter = new BinaryFormatter();
-
-        //Open up a file string- create a route from that program to the file
         FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Create);
-
-        //Create a copy of save data
-        SaveData data = new SaveData();
-        data = saveData;
-
-        //Actually save the data in the file and then close the data stream
-        formatter.Serialize(file, data);
+        formatter.Serialize(file, saveData);
         file.Close();
-
-        //Debug.Log("Saved");
     }
 
     public void Load()
     {
-        //Check if the save game file exists
-        
         if (File.Exists(Application.persistentDataPath + "/player.dat"))
         {
-            //Create a binary formatter
             BinaryFormatter formatter = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
-            //Debug.Log("Loaded");
         }
         else
-        { 
-            saveData = new SaveData();
-            saveData.isActive = new bool[100];
-            saveData.stars = new int[100];
-            saveData.highScore = new int[100];
-            saveData.isActive[0] = true;
-            saveData.isActive[3] = true;
-            saveData.isActive[6] = true;
+        {
+            InitializeSaveData(); // Initialize with default values
         }
-  
+
+        EnsureDefaultLevelsActive(); // Ensure levels 0, 3, and 6 are active
+    }
+
+    private void EnsureDefaultLevelsActive()
+    {
+        saveData.isActive[0] = true;
+        saveData.isActive[3] = true;
+        saveData.isActive[6] = true;
     }
 
     private void OnApplicationQuit()
     {
         Save();
-;    }
+    }
 
     private void OnDisable()
     {
@@ -99,12 +97,12 @@ public class GameData : MonoBehaviour
         {
             File.Delete(Application.persistentDataPath + "/player.dat");
         }
-        Load();
+        InitializeSaveData(); // Reset to default values
+        Save(); // Save the reset data
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        // Update logic if needed
     }
 }
