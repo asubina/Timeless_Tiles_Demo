@@ -152,4 +152,5 @@ MonoBehaviour:
   rowArrow: {fileID: 1775534601444322, guid: a10db065bdfa54e23bf91be31858fa5d, type: 3}
   columnArrow: {fileID: 1629322208613970, guid: 36f4acc9beec24301a6fe1acfc05a567,
     type: 3}
-  colorBomb: {fileID: 1942758963516802, guid: 127ce63b5911c45abae4b1dde87e05da, type: 3}
+  colorBomb: {fileID: 6087585660444388284, guid: 1b6cf382dae68bc40ad0d320dea279b1,
+    type: 3}

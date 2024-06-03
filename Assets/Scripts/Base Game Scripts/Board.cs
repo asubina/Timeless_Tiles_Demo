@@ -777,6 +777,7 @@ public class Board : MonoBehaviour
                 }
             }
         }
+        
     }
 
     private bool MatchesOnBoard()
@@ -808,6 +809,7 @@ public class Board : MonoBehaviour
             DestroyMatches();
             yield break;
         }
+        DestroyMatches();
         currentDot = null;
         CheckToMakeSlime();
 
